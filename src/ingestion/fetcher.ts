@@ -1,5 +1,5 @@
 import { fetchPage, CursorExpiredError } from '../api/client';
-import { fetchStreamPage, isStreamAvailable } from '../api/stream';
+import { fetchStreamPage, isStreamAvailable, invalidateStreamToken } from '../api/stream';
 import { batchInsertEvents, getEventCount } from '../db/client';
 import { saveCheckpoint, loadCheckpoint, clearCheckpoints } from './checkpoint';
 import { AsyncQueue } from './queue';
@@ -26,22 +26,36 @@ async function fetchPagesStream(
   startCursor: string | null
 ): Promise<void> {
   let cursor = startCursor;
+  let consecutiveErrors = 0;
+  const MAX_CONSECUTIVE_ERRORS = 3;
 
-  console.log('Using high-throughput stream feed (no rate limits!)');
+  console.log('Using high-throughput stream feed');
 
   while (true) {
     try {
       const response = await fetchStreamPage(cursor, config.pageSize);
       await queue.enqueue(response);
+      consecutiveErrors = 0; // Reset on success
 
       if (!response.pagination.hasMore) {
         break;
       }
       cursor = response.pagination.nextCursor;
     } catch (error) {
-      // If stream fails, don't retry - let it bubble up
-      console.error('Stream fetch error:', error);
-      throw error;
+      consecutiveErrors++;
+      console.error(`Stream fetch error (${consecutiveErrors}/${MAX_CONSECUTIVE_ERRORS}):`,
+        error instanceof Error ? error.message : error);
+
+      // Try refreshing token
+      invalidateStreamToken();
+
+      if (consecutiveErrors >= MAX_CONSECUTIVE_ERRORS) {
+        console.error('Too many stream errors, giving up');
+        throw error;
+      }
+
+      // Wait a bit before retrying
+      await new Promise(r => setTimeout(r, 2000));
     }
   }
 

@@ -57,34 +57,77 @@ export async function getStreamAccess(): Promise<StreamAccess> {
  * Fetch page from high-throughput stream feed
  * This endpoint likely has no rate limits!
  */
+function sleep(ms: number): Promise<void> {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 export async function fetchStreamPage(cursor?: string | null, limit: number = 5000): Promise<ApiResponse> {
-  const streamAccess = await getStreamAccess();
+  const maxRetries = 10;
+  let lastError: Error | null = null;
 
-  const baseUrl = config.apiBaseUrl.replace('/api/v1', '');
-  const params = new URLSearchParams();
-  if (cursor) {
-    params.set('cursor', cursor);
-  }
-  params.set('limit', String(limit));
+  for (let attempt = 0; attempt < maxRetries; attempt++) {
+    const streamAccess = await getStreamAccess();
 
-  const url = `${baseUrl}${streamAccess.endpoint}?${params.toString()}`;
-
-  try {
-    const response = await axios.get<ApiResponse>(url, {
-      headers: {
-        'X-API-Key': config.apiKey,
-        'X-Stream-Token': streamAccess.token,
-      },
-      timeout: 60000,
-    });
-
-    return response.data;
-  } catch (error) {
-    if (axios.isAxiosError(error) && error.response) {
-      console.error('Stream feed error:', error.response.status, error.response.data);
+    const baseUrl = config.apiBaseUrl.replace('/api/v1', '');
+    const params = new URLSearchParams();
+    if (cursor) {
+      params.set('cursor', cursor);
     }
-    throw error;
+    params.set('limit', String(limit));
+
+    const url = `${baseUrl}${streamAccess.endpoint}?${params.toString()}`;
+
+    try {
+      const response = await axios.get<ApiResponse>(url, {
+        headers: {
+          'X-API-Key': config.apiKey,
+          'X-Stream-Token': streamAccess.token,
+        },
+        timeout: 60000,
+      });
+
+      return response.data;
+    } catch (error) {
+      lastError = error as Error;
+
+      if (axios.isAxiosError(error) && error.response) {
+        const status = error.response.status;
+        const data = error.response.data as { retryAfter?: number; rateLimit?: { retryAfter?: number } };
+
+        // Handle rate limiting
+        if (status === 429) {
+          let waitTime = 5000;
+
+          // Try to get retry time from response
+          const retryAfter = data?.retryAfter ?? data?.rateLimit?.retryAfter;
+          if (typeof retryAfter === 'number') {
+            waitTime = retryAfter * 1000;
+          }
+
+          // Add jitter
+          waitTime += Math.random() * 1000;
+
+          console.log(`Stream rate limited. Waiting ${Math.round(waitTime / 1000)}s... (attempt ${attempt + 1}/${maxRetries})`);
+          await sleep(waitTime);
+          continue;
+        }
+
+        // Handle token expiry - clear cache and retry
+        if (status === 401 || status === 403) {
+          console.log('Stream token may have expired, refreshing...');
+          cachedStreamAccess = null;
+          streamAccessExpiry = 0;
+          continue;
+        }
+
+        console.error('Stream feed error:', status, error.response.data);
+      }
+
+      throw error;
+    }
   }
+
+  throw lastError || new Error('Max retries exceeded for stream fetch');
 }
 
 /**
@@ -95,7 +138,19 @@ export async function isStreamAvailable(): Promise<boolean> {
     await getStreamAccess();
     return true;
   } catch (error) {
-    console.warn('Stream access not available, falling back to regular API');
+    if (axios.isAxiosError(error)) {
+      console.warn('Stream access not available:', error.response?.status, error.response?.data || error.message);
+    } else {
+      console.warn('Stream access not available:', error);
+    }
     return false;
   }
+}
+
+/**
+ * Force refresh the stream token
+ */
+export function invalidateStreamToken(): void {
+  cachedStreamAccess = null;
+  streamAccessExpiry = 0;
 }

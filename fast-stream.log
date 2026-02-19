@@ -7,13 +7,68 @@ Page size: 5000 events/request
 
 Initializing database...
 Database initialized
-Found 50,000 existing events in database
 
 Starting ingestion...
-Resuming from checkpoint: 50000 events already ingested
-Database has 50000 events
+Starting fresh ingestion
 Stream access obtained, expires in 300s
 Using high-throughput stream feed (no rate limits!)
+Progress: 5,000 / 3,000,000 (0.17%) | 1173 events/sec | ETA: 42:32 | Buffer: 0
+Progress: 10,000 / 3,000,000 (0.33%) | 1301 events/sec | ETA: 38:19 | Buffer: 0
+Progress: 15,000 / 3,000,000 (0.50%) | 1343 events/sec | ETA: 37:02 | Buffer: 0
+Progress: 20,000 / 3,000,000 (0.67%) | 1373 events/sec | ETA: 36:11 | Buffer: 0
+Progress: 25,000 / 3,000,000 (0.83%) | 1387 events/sec | ETA: 35:45 | Buffer: 0
+Progress: 30,000 / 3,000,000 (1.00%) | 1393 events/sec | ETA: 35:32 | Buffer: 0
+Progress: 35,000 / 3,000,000 (1.17%) | 1404 events/sec | ETA: 35:12 | Buffer: 0
+Progress: 40,000 / 3,000,000 (1.33%) | 1410 events/sec | ETA: 34:59 | Buffer: 0
+Progress: 45,000 / 3,000,000 (1.50%) | 1414 events/sec | ETA: 34:49 | Buffer: 0
+Progress: 50,000 / 3,000,000 (1.67%) | 1416 events/sec | ETA: 34:43 | Buffer: 0
+Progress: 55,000 / 3,000,000 (1.83%) | 1422 events/sec | ETA: 34:31 | Buffer: 0
+Progress: 60,000 / 3,000,000 (2.00%) | 1426 events/sec | ETA: 34:22 | Buffer: 0
+Progress: 65,000 / 3,000,000 (2.17%) | 1429 events/sec | ETA: 34:13 | Buffer: 0
+Progress: 70,000 / 3,000,000 (2.33%) | 1428 events/sec | ETA: 34:11 | Buffer: 0
+Progress: 75,000 / 3,000,000 (2.50%) | 1426 events/sec | ETA: 34:10 | Buffer: 0
+Progress: 80,000 / 3,000,000 (2.67%) | 1428 events/sec | ETA: 34:04 | Buffer: 0
+Progress: 85,000 / 3,000,000 (2.83%) | 1427 events/sec | ETA: 34:03 | Buffer: 0
+Progress: 90,000 / 3,000,000 (3.00%) | 1428 events/sec | ETA: 33:57 | Buffer: 0
+Progress: 95,000 / 3,000,000 (3.17%) | 1423 events/sec | ETA: 34:00 | Buffer: 0
+Progress: 100,000 / 3,000,000 (3.33%) | 1419 events/sec | ETA: 34:03 | Buffer: 0
+Progress: 105,000 / 3,000,000 (3.50%) | 1414 events/sec | ETA: 34:07 | Buffer: 0
+Progress: 110,000 / 3,000,000 (3.67%) | 1411 events/sec | ETA: 34:08 | Buffer: 0
+Progress: 115,000 / 3,000,000 (3.83%) | 1407 events/sec | ETA: 34:10 | Buffer: 0
+Progress: 120,000 / 3,000,000 (4.00%) | 1403 events/sec | ETA: 34:12 | Buffer: 0
+Progress: 125,000 / 3,000,000 (4.17%) | 1402 events/sec | ETA: 34:10 | Buffer: 0
+Progress: 130,000 / 3,000,000 (4.33%) | 1400 events/sec | ETA: 34:09 | Buffer: 0
+Progress: 135,000 / 3,000,000 (4.50%) | 1399 events/sec | ETA: 34:08 | Buffer: 0
+Progress: 140,000 / 3,000,000 (4.67%) | 1396 events/sec | ETA: 34:09 | Buffer: 0
+Progress: 145,000 / 3,000,000 (4.83%) | 1392 events/sec | ETA: 34:10 | Buffer: 0
+Progress: 150,000 / 3,000,000 (5.00%) | 1386 events/sec | ETA: 34:15 | Buffer: 0
+Progress: 155,000 / 3,000,000 (5.17%) | 1383 events/sec | ETA: 34:16 | Buffer: 0
+Progress: 160,000 / 3,000,000 (5.33%) | 1379 events/sec | ETA: 34:19 | Buffer: 0
+Progress: 165,000 / 3,000,000 (5.50%) | 1377 events/sec | ETA: 34:18 | Buffer: 0
+Progress: 170,000 / 3,000,000 (5.67%) | 1377 events/sec | ETA: 34:14 | Buffer: 0
+Progress: 175,000 / 3,000,000 (5.83%) | 1377 events/sec | ETA: 34:10 | Buffer: 0
+Progress: 180,000 / 3,000,000 (6.00%) | 1377 events/sec | ETA: 34:07 | Buffer: 0
+Progress: 185,000 / 3,000,000 (6.17%) | 1377 events/sec | ETA: 34:04 | Buffer: 0
+Progress: 190,000 / 3,000,000 (6.33%) | 1376 events/sec | ETA: 34:02 | Buffer: 0
+Progress: 195,000 / 3,000,000 (6.50%) | 1376 events/sec | ETA: 33:58 | Buffer: 0
+Progress: 200,000 / 3,000,000 (6.67%) | 1375 events/sec | ETA: 33:56 | Buffer: 0
+Progress: 205,000 / 3,000,000 (6.83%) | 1375 events/sec | ETA: 33:53 | Buffer: 0
+Progress: 210,000 / 3,000,000 (7.00%) | 1375 events/sec | ETA: 33:49 | Buffer: 0
+Progress: 215,000 / 3,000,000 (7.17%) | 1374 events/sec | ETA: 33:47 | Buffer: 0
+Progress: 220,000 / 3,000,000 (7.33%) | 1373 events/sec | ETA: 33:44 | Buffer: 0
+Progress: 225,000 / 3,000,000 (7.50%) | 1373 events/sec | ETA: 33:41 | Buffer: 0
+Progress: 230,000 / 3,000,000 (7.67%) | 1372 events/sec | ETA: 33:38 | Buffer: 0
+Progress: 235,000 / 3,000,000 (7.83%) | 1370 events/sec | ETA: 33:37 | Buffer: 0
+Progress: 240,000 / 3,000,000 (8.00%) | 1369 events/sec | ETA: 33:35 | Buffer: 0
+Progress: 245,000 / 3,000,000 (8.17%) | 1368 events/sec | ETA: 33:34 | Buffer: 0
+Progress: 250,000 / 3,000,000 (8.33%) | 1367 events/sec | ETA: 33:31 | Buffer: 0
+Progress: 255,000 / 3,000,000 (8.50%) | 1366 events/sec | ETA: 33:29 | Buffer: 0
+Progress: 260,000 / 3,000,000 (8.67%) | 1365 events/sec | ETA: 33:27 | Buffer: 0
+Progress: 265,000 / 3,000,000 (8.83%) | 1364 events/sec | ETA: 33:24 | Buffer: 0
+Progress: 270,000 / 3,000,000 (9.00%) | 1364 events/sec | ETA: 33:21 | Buffer: 0
+Progress: 275,000 / 3,000,000 (9.17%) | 1364 events/sec | ETA: 33:17 | Buffer: 0
+Progress: 280,000 / 3,000,000 (9.33%) | 1364 events/sec | ETA: 33:14 | Buffer: 0
+Progress: 285,000 / 3,000,000 (9.50%) | 1363 events/sec | ETA: 33:12 | Buffer: 0
 ============================================================
 DataSync Ingestion Pipeline
 ============================================================
@@ -23,13 +78,56 @@ Page size: 5000 events/request
 
 Initializing database...
 Database initialized
-Found 50,000 existing events in database
+Found 285,000 existing events in database
 
 Starting ingestion...
-Resuming from checkpoint: 50000 events already ingested
-Database has 50000 events
+Resuming from checkpoint: 285000 events already ingested
+Database has 285000 events
 Stream access obtained, expires in 300s
+Stream mode: ignoring checkpoint cursor, starting fresh (existing events will be skipped via ON CONFLICT)
 Using high-throughput stream feed (no rate limits!)
+Progress: 290,000 / 3,000,000 (9.67%) | 67757 events/sec | ETA: 0:39 | Buffer: 0
+Progress: 295,000 / 3,000,000 (9.83%) | 38079 events/sec | ETA: 1:11 | Buffer: 0
+Progress: 300,000 / 3,000,000 (10.00%) | 26608 events/sec | ETA: 1:41 | Buffer: 0
+Progress: 305,000 / 3,000,000 (10.17%) | 20717 events/sec | ETA: 2:10 | Buffer: 0
+Progress: 310,000 / 3,000,000 (10.33%) | 17021 events/sec | ETA: 2:38 | Buffer: 0
+Progress: 315,000 / 3,000,000 (10.50%) | 14558 events/sec | ETA: 3:04 | Buffer: 0
+Progress: 320,000 / 3,000,000 (10.67%) | 12694 events/sec | ETA: 3:31 | Buffer: 0
+Progress: 325,000 / 3,000,000 (10.83%) | 11326 events/sec | ETA: 3:56 | Buffer: 0
+Progress: 330,000 / 3,000,000 (11.00%) | 10273 events/sec | ETA: 4:19 | Buffer: 0
+Progress: 335,000 / 3,000,000 (11.17%) | 9401 events/sec | ETA: 4:43 | Buffer: 0
+Progress: 340,000 / 3,000,000 (11.33%) | 8701 events/sec | ETA: 5:05 | Buffer: 0
+Progress: 345,000 / 3,000,000 (11.50%) | 8117 events/sec | ETA: 5:27 | Buffer: 0
+Progress: 350,000 / 3,000,000 (11.67%) | 7613 events/sec | ETA: 5:48 | Buffer: 0
+Progress: 355,000 / 3,000,000 (11.83%) | 7160 events/sec | ETA: 6:09 | Buffer: 0
+Progress: 360,000 / 3,000,000 (12.00%) | 6788 events/sec | ETA: 6:28 | Buffer: 0
+Progress: 365,000 / 3,000,000 (12.17%) | 6447 events/sec | ETA: 6:48 | Buffer: 0
+Progress: 370,000 / 3,000,000 (12.33%) | 6158 events/sec | ETA: 7:07 | Buffer: 0
+Progress: 375,000 / 3,000,000 (12.50%) | 5904 events/sec | ETA: 7:24 | Buffer: 0
+Progress: 380,000 / 3,000,000 (12.67%) | 5675 events/sec | ETA: 7:41 | Buffer: 0
+Progress: 385,000 / 3,000,000 (12.83%) | 5459 events/sec | ETA: 7:59 | Buffer: 0
+Progress: 390,000 / 3,000,000 (13.00%) | 5268 events/sec | ETA: 8:15 | Buffer: 0
+Progress: 395,000 / 3,000,000 (13.17%) | 5100 events/sec | ETA: 8:30 | Buffer: 0
+Progress: 400,000 / 3,000,000 (13.33%) | 4947 events/sec | ETA: 8:45 | Buffer: 0
+Progress: 405,000 / 3,000,000 (13.50%) | 4803 events/sec | ETA: 9:00 | Buffer: 0
+Progress: 410,000 / 3,000,000 (13.67%) | 4668 events/sec | ETA: 9:14 | Buffer: 0
+Progress: 415,000 / 3,000,000 (13.83%) | 4544 events/sec | ETA: 9:28 | Buffer: 0
+Progress: 420,000 / 3,000,000 (14.00%) | 4426 events/sec | ETA: 9:42 | Buffer: 0
+Progress: 425,000 / 3,000,000 (14.17%) | 4321 events/sec | ETA: 9:55 | Buffer: 0
+Progress: 430,000 / 3,000,000 (14.33%) | 4216 events/sec | ETA: 10:09 | Buffer: 0
+Progress: 435,000 / 3,000,000 (14.50%) | 4123 events/sec | ETA: 10:22 | Buffer: 0
+Progress: 440,000 / 3,000,000 (14.67%) | 4036 events/sec | ETA: 10:34 | Buffer: 0
+Progress: 445,000 / 3,000,000 (14.83%) | 3955 events/sec | ETA: 10:46 | Buffer: 0
+Progress: 450,000 / 3,000,000 (15.00%) | 3879 events/sec | ETA: 10:57 | Buffer: 0
+Progress: 455,000 / 3,000,000 (15.17%) | 3804 events/sec | ETA: 11:09 | Buffer: 0
+Progress: 460,000 / 3,000,000 (15.33%) | 3736 events/sec | ETA: 11:19 | Buffer: 0
+Progress: 465,000 / 3,000,000 (15.50%) | 3672 events/sec | ETA: 11:30 | Buffer: 0
+Progress: 470,000 / 3,000,000 (15.67%) | 3611 events/sec | ETA: 11:40 | Buffer: 0
+Progress: 475,000 / 3,000,000 (15.83%) | 3554 events/sec | ETA: 11:50 | Buffer: 0
+Progress: 480,000 / 3,000,000 (16.00%) | 3499 events/sec | ETA: 12:00 | Buffer: 0
+Progress: 485,000 / 3,000,000 (16.17%) | 3444 events/sec | ETA: 12:10 | Buffer: 0
+Progress: 490,000 / 3,000,000 (16.33%) | 3395 events/sec | ETA: 12:19 | Buffer: 0
+Progress: 495,000 / 3,000,000 (16.50%) | 3345 events/sec | ETA: 12:28 | Buffer: 0
 ============================================================
 DataSync Ingestion Pipeline
 ============================================================
@@ -39,106 +137,33 @@ Page size: 5000 events/request
 
 Initializing database...
 Database initialized
-Found 50,000 existing events in database
+Found 285,000 existing events in database
 
 Starting ingestion...
-Resuming from checkpoint: 50000 events already ingested
-Database has 50000 events
-Stream access obtained, expires in 300s
-Using high-throughput stream feed (no rate limits!)
-============================================================
-DataSync Ingestion Pipeline
-============================================================
-API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
-Database URL: postgres://postgres:***@postgres:5432/ingestion
-Page size: 5000 events/request
-
-Initializing database...
-Database initialized
-Found 50,000 existing events in database
-
-Starting ingestion...
-Resuming from checkpoint: 50000 events already ingested
-Database has 50000 events
-Stream access obtained, expires in 300s
-Using high-throughput stream feed (no rate limits!)
-============================================================
-DataSync Ingestion Pipeline
-============================================================
-API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
-Database URL: postgres://postgres:***@postgres:5432/ingestion
-Page size: 5000 events/request
-
-Initializing database...
-Database initialized
-Found 50,000 existing events in database
-
-Starting ingestion...
-Resuming from checkpoint: 50000 events already ingested
-Database has 50000 events
-Stream access obtained, expires in 300s
-Using high-throughput stream feed (no rate limits!)
-============================================================
-DataSync Ingestion Pipeline
-============================================================
-API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
-Database URL: postgres://postgres:***@postgres:5432/ingestion
-Page size: 5000 events/request
-
-Initializing database...
-Database initialized
-Found 50,000 existing events in database
-
-Starting ingestion...
-Resuming from checkpoint: 50000 events already ingested
-Database has 50000 events
-Stream access obtained, expires in 300s
-Using high-throughput stream feed (no rate limits!)
-============================================================
-DataSync Ingestion Pipeline
-============================================================
-API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
-Database URL: postgres://postgres:***@postgres:5432/ingestion
-Page size: 5000 events/request
-
-Initializing database...
-Database initialized
-Found 50,000 existing events in database
-
-Starting ingestion...
-Resuming from checkpoint: 50000 events already ingested
-Database has 50000 events
-Stream access obtained, expires in 300s
-Using high-throughput stream feed (no rate limits!)
-============================================================
-DataSync Ingestion Pipeline
-============================================================
-API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
-Database URL: postgres://postgres:***@postgres:5432/ingestion
-Page size: 5000 events/request
-
-Initializing database...
-Database initialized
-Found 50,000 existing events in database
-
-Starting ingestion...
-Resuming from checkpoint: 50000 events already ingested
-Database has 50000 events
-Stream access obtained, expires in 300s
-Using high-throughput stream feed (no rate limits!)
-============================================================
-DataSync Ingestion Pipeline
-============================================================
-API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
-Database URL: postgres://postgres:***@postgres:5432/ingestion
-Page size: 5000 events/request
-
-Initializing database...
-Database initialized
-Found 50,000 existing events in database
-
-Starting ingestion...
-Resuming from checkpoint: 50000 events already ingested
-Database has 50000 events
-Stream access obtained, expires in 300s
-Using high-throughput stream feed (no rate limits!)
+Resuming from checkpoint: 495000 events already ingested
+Database has 285000 events
+Using regular API (rate limited)
+Progress: 500,000 / 3,000,000 (16.67%) | 101667 events/sec | ETA: 0:24 | Buffer: 0
+Request failed (ERR_BAD_RESPONSE). Retrying in 1223ms... (attempt 2/5)
+Request failed (ERR_BAD_RESPONSE). Retrying in 2411ms... (attempt 3/5)
+Request failed (ERR_BAD_RESPONSE). Retrying in 4483ms... (attempt 4/5)
+Progress: 505,000 / 3,000,000 (16.83%) | 10686 events/sec | ETA: 3:53 | Buffer: 0
+Progress: 510,000 / 3,000,000 (17.00%) | 10026 events/sec | ETA: 4:08 | Buffer: 0
+Progress: 515,000 / 3,000,000 (17.17%) | 9451 events/sec | ETA: 4:22 | Buffer: 0
+Progress: 520,000 / 3,000,000 (17.33%) | 8948 events/sec | ETA: 4:37 | Buffer: 0
+Progress: 525,000 / 3,000,000 (17.50%) | 8495 events/sec | ETA: 4:51 | Buffer: 0
+Progress: 530,000 / 3,000,000 (17.67%) | 8091 events/sec | ETA: 5:05 | Buffer: 0
+Progress: 535,000 / 3,000,000 (17.83%) | 7723 events/sec | ETA: 5:19 | Buffer: 0
+Progress: 540,000 / 3,000,000 (18.00%) | 7397 events/sec | ETA: 5:32 | Buffer: 0
+Progress: 545,000 / 3,000,000 (18.17%) | 7107 events/sec | ETA: 5:45 | Buffer: 0
+Progress: 550,000 / 3,000,000 (18.33%) | 6813 events/sec | ETA: 5:59 | Buffer: 0
+Rate limited. Waiting 23442ms (not counting as retry)...
+Rate limited. Waiting 3417ms (not counting as retry)...
+Rate limited. Waiting 3251ms (not counting as retry)...
+Rate limited. Waiting 4410ms (not counting as retry)...
+Rate limited. Waiting 3106ms (not counting as retry)...
+Rate limited. Waiting 3395ms (not counting as retry)...
+Rate limited. Waiting 3217ms (not counting as retry)...
+Rate limited. Waiting 4218ms (not counting as retry)...
+Rate limited. Waiting 3339ms (not counting as retry)...
+Rate limited. Waiting 3243ms (not counting as retry)...
