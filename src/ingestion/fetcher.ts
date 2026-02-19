@@ -1,6 +1,6 @@
 import { fetchPage } from '../api/client';
-import { batchInsertIds } from '../db/client';
-import { saveCheckpoint, loadCheckpoint, Checkpoint } from './checkpoint';
+import { batchInsertEvents } from '../db/client';
+import { saveCheckpoint, loadCheckpoint } from './checkpoint';
 
 export interface IngestionStats {
   totalIngested: number;
@@ -31,10 +31,9 @@ export async function runIngestion(): Promise<IngestionStats> {
     // Update total expected from API response
     totalExpected = response.meta.total;
 
-    // Extract and insert event IDs
-    const ids = response.data.map(e => e.id);
-    await batchInsertIds(ids);
-    totalIngested += ids.length;
+    // Insert full events
+    await batchInsertEvents(response.data);
+    totalIngested += response.data.length;
     pagesProcessed++;
 
     // Save checkpoint

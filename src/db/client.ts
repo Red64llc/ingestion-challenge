@@ -1,5 +1,6 @@
 import { Pool } from 'pg';
 import { config } from '../config';
+import { Event } from '../api/types';
 
 let pool: Pool | null = null;
 
@@ -54,10 +55,18 @@ export async function initDatabase(): Promise<void> {
 
   const db = await getPool();
 
-  // Create ingested_events table (simplified - only store IDs)
+  // Create ingested_events table with full event data
   await db.query(`
     CREATE TABLE IF NOT EXISTS ingested_events (
-      id VARCHAR(36) PRIMARY KEY
+      id VARCHAR(36) PRIMARY KEY,
+      session_id VARCHAR(36),
+      user_id VARCHAR(36),
+      type VARCHAR(50),
+      name VARCHAR(100),
+      properties JSONB,
+      timestamp BIGINT,
+      device_type VARCHAR(50),
+      browser VARCHAR(50)
     )
   `);
 
@@ -74,15 +83,36 @@ export async function initDatabase(): Promise<void> {
   console.log('Database initialized');
 }
 
-export async function batchInsertIds(ids: string[]): Promise<void> {
-  if (ids.length === 0) return;
+export async function batchInsertEvents(events: Event[]): Promise<void> {
+  if (events.length === 0) return;
 
   const db = await getPool();
+
+  // Build values for batch insert
+  const values: unknown[] = [];
+  const placeholders: string[] = [];
+
+  events.forEach((event, i) => {
+    const offset = i * 9;
+    placeholders.push(`($${offset + 1}, $${offset + 2}, $${offset + 3}, $${offset + 4}, $${offset + 5}, $${offset + 6}, $${offset + 7}, $${offset + 8}, $${offset + 9})`);
+    values.push(
+      event.id,
+      event.sessionId,
+      event.userId,
+      event.type,
+      event.name,
+      JSON.stringify(event.properties),
+      typeof event.timestamp === 'number' ? event.timestamp : Date.parse(event.timestamp),
+      event.session?.deviceType || null,
+      event.session?.browser || null
+    );
+  });
+
   await db.query(`
-    INSERT INTO ingested_events (id)
-    SELECT UNNEST($1::varchar[])
-    ON CONFLICT DO NOTHING
-  `, [ids]);
+    INSERT INTO ingested_events (id, session_id, user_id, type, name, properties, timestamp, device_type, browser)
+    VALUES ${placeholders.join(', ')}
+    ON CONFLICT (id) DO NOTHING
+  `, values);
 }
 
 export async function getEventCount(): Promise<number> {

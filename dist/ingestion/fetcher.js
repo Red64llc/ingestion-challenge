@@ -22,10 +22,9 @@ async function runIngestion() {
         const response = await (0, client_1.fetchPage)(cursor);
         // Update total expected from API response
         totalExpected = response.meta.total;
-        // Extract and insert event IDs
-        const ids = response.data.map(e => e.id);
-        await (0, client_2.batchInsertIds)(ids);
-        totalIngested += ids.length;
+        // Insert full events
+        await (0, client_2.batchInsertEvents)(response.data);
+        totalIngested += response.data.length;
         pagesProcessed++;
         // Save checkpoint
         await (0, checkpoint_1.saveCheckpoint)(response.pagination.nextCursor, totalIngested);
