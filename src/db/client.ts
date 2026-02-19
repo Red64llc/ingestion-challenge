@@ -3,6 +3,42 @@ import { config } from '../config';
 
 let pool: Pool | null = null;
 
+function getAdminConnectionString(): string {
+  // Replace the database name with 'postgres' to connect to the default database
+  const url = new URL(config.databaseUrl);
+  url.pathname = '/postgres';
+  return url.toString();
+}
+
+function getDatabaseName(): string {
+  const url = new URL(config.databaseUrl);
+  return url.pathname.slice(1); // Remove leading '/'
+}
+
+async function ensureDatabase(): Promise<void> {
+  const dbName = getDatabaseName();
+  const adminPool = new Pool({
+    connectionString: getAdminConnectionString(),
+  });
+
+  try {
+    // Check if database exists
+    const result = await adminPool.query(
+      'SELECT 1 FROM pg_database WHERE datname = $1',
+      [dbName]
+    );
+
+    if (result.rows.length === 0) {
+      // Create database
+      console.log(`Creating database '${dbName}'...`);
+      await adminPool.query(`CREATE DATABASE "${dbName}"`);
+      console.log(`Database '${dbName}' created`);
+    }
+  } finally {
+    await adminPool.end();
+  }
+}
+
 export async function getPool(): Promise<Pool> {
   if (!pool) {
     pool = new Pool({
@@ -13,6 +49,9 @@ export async function getPool(): Promise<Pool> {
 }
 
 export async function initDatabase(): Promise<void> {
+  // Ensure database exists first
+  await ensureDatabase();
+
   const db = await getPool();
 
   // Create ingested_events table (simplified - only store IDs)
