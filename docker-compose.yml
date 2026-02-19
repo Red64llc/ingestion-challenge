@@ -1,0 +1,32 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: assignment-postgres
+    ports:
+      - "5434:5432"
+    environment:
+      POSTGRES_DB: ingestion
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d ingestion"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  ingestion:
+    build: .
+    image: assignment-ingestion
+    container_name: assignment-ingestion
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgres://postgres:postgres@postgres:5432/ingestion
+      API_KEY: ${API_KEY}
+    restart: on-failure
+
+volumes:
+  postgres_data:

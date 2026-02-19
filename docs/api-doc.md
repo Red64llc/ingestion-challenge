@@ -15,3 +15,7 @@ questions:
 
 Todo:
 [ ] identify rate limit (  2. Inspect response headers - Look for rate limit info, pagination hints)
+[ ] check logs
+[ ] parallization of infgestion
+[ ] build database?
+[ ] full events ingested (not just ids)?
