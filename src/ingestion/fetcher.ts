@@ -1,6 +1,7 @@
 import { fetchPage } from '../api/client';
 import { batchInsertEvents } from '../db/client';
 import { saveCheckpoint, loadCheckpoint } from './checkpoint';
+import { AsyncQueue } from './queue';
 
 export interface IngestionStats {
   totalIngested: number;
@@ -9,24 +10,45 @@ export interface IngestionStats {
   startTime: number;
 }
 
-export async function runIngestion(): Promise<IngestionStats> {
-  const startTime = Date.now();
+interface ConsumerState {
+  totalIngested: number;
+  totalExpected: number;
+  pagesProcessed: number;
+  startTime: number;
+}
 
-  // Check for existing checkpoint
-  const checkpoint = await loadCheckpoint();
-  let cursor: string | null = checkpoint?.cursor ?? null;
-  let totalIngested = checkpoint?.eventsIngested ?? 0;
-  let pagesProcessed = checkpoint ? Math.floor(checkpoint.eventsIngested / 100) : 0;
-  let totalExpected = 3000000;
+const BUFFER_SIZE = 5;
 
-  if (checkpoint) {
-    console.log(`Resuming from checkpoint: ${totalIngested} events already ingested`);
-  } else {
-    console.log('Starting fresh ingestion');
-  }
+async function fetchPages(
+  queue: AsyncQueue,
+  startCursor: string | null
+): Promise<void> {
+  let cursor = startCursor;
 
   while (true) {
     const response = await fetchPage(cursor);
+    await queue.enqueue(response);
+
+    if (!response.pagination.hasMore) {
+      break;
+    }
+    cursor = response.pagination.nextCursor;
+  }
+
+  queue.close();
+}
+
+async function writePages(
+  queue: AsyncQueue,
+  state: ConsumerState
+): Promise<IngestionStats> {
+  let { totalIngested, totalExpected, pagesProcessed, startTime } = state;
+
+  while (true) {
+    const response = await queue.dequeue();
+    if (response === null) {
+      break;
+    }
 
     // Update total expected from API response
     totalExpected = response.meta.total;
@@ -47,17 +69,11 @@ export async function runIngestion(): Promise<IngestionStats> {
 
     console.log(
       `Progress: ${totalIngested.toLocaleString()} / ${totalExpected.toLocaleString()} ` +
-      `(${percent}%) | ${rate.toFixed(0)} events/sec | ETA: ${formatTime(remaining)}`
+      `(${percent}%) | ${rate.toFixed(0)} events/sec | ETA: ${formatTime(remaining)} | Buffer: ${queue.size}`
     );
-
-    // Check if we're done
-    if (!response.pagination.hasMore) {
-      console.log('No more pages - ingestion complete!');
-      break;
-    }
-
-    cursor = response.pagination.nextCursor;
   }
+
+  console.log('No more pages - ingestion complete!');
 
   return {
     totalIngested,
@@ -65,6 +81,39 @@ export async function runIngestion(): Promise<IngestionStats> {
     pagesProcessed,
     startTime,
   };
+}
+
+export async function runIngestion(): Promise<IngestionStats> {
+  const startTime = Date.now();
+
+  // Check for existing checkpoint
+  const checkpoint = await loadCheckpoint();
+  const startCursor = checkpoint?.cursor ?? null;
+  const totalIngested = checkpoint?.eventsIngested ?? 0;
+  const pagesProcessed = checkpoint ? Math.floor(checkpoint.eventsIngested / 100) : 0;
+
+  if (checkpoint) {
+    console.log(`Resuming from checkpoint: ${totalIngested} events already ingested`);
+  } else {
+    console.log('Starting fresh ingestion');
+  }
+
+  const queue = new AsyncQueue(BUFFER_SIZE);
+
+  const initialState: ConsumerState = {
+    totalIngested,
+    totalExpected: 3000000,
+    pagesProcessed,
+    startTime,
+  };
+
+  // Run producer and consumer concurrently
+  const [, stats] = await Promise.all([
+    fetchPages(queue, startCursor),
+    writePages(queue, initialState),
+  ]);
+
+  return stats;
 }
 
 function formatTime(seconds: number): string {

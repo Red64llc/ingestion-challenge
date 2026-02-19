@@ -1,0 +1,491 @@
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+
+Initializing database...
+Database initialized
+Found 500 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 500 events already ingested
+Rate limited. Waiting 3000ms before retry...
+Rate limited. Waiting 13000ms before retry...
+Rate limited. Waiting 1000ms before retry...
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+
+Initializing database...
+Database initialized
+Found 500 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 500 events already ingested
+Rate limited. Waiting 1000ms before retry...
+Rate limited. Waiting 14000ms before retry...
+Rate limited. Waiting 4000ms before retry...
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+
+Initializing database...
+Database initialized
+Found 500 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 500 events already ingested
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+
+Initializing database...
+Database initialized
+Found 500 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 500 events already ingested
+Rate limited. Waiting 3000ms before retry...
+Rate limited. Waiting 3000ms before retry...
+Rate limited. Waiting 4000ms before retry...
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+
+Initializing database...
+Database initialized
+Found 500 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 500 events already ingested
+Rate limited. Waiting 12000ms before retry...
+Rate limited. Waiting 2000ms before retry...
+Rate limited. Waiting 13000ms before retry...
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+
+Initializing database...
+Database initialized
+Found 500 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 500 events already ingested
+Rate limited. Waiting 1000ms before retry...
+Rate limited. Waiting 1000ms before retry...
+Rate limited. Waiting 15000ms before retry...
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+
+Initializing database...
+Database initialized
+Found 500 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 500 events already ingested
+Rate limited. Waiting 4000ms before retry...
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+
+Initializing database...
+Database initialized
+Found 500 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 500 events already ingested
+Rate limited. Waiting 2000ms before retry...
+Rate limited. Waiting 3000ms before retry...
+Rate limited. Waiting 5000ms before retry...
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+
+Initializing database...
+Database initialized
+Found 500 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 500 events already ingested
+Rate limited. Waiting 12000ms before retry...
+Rate limited. Waiting 1000ms before retry...
+Rate limited. Waiting 14000ms before retry...
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+
+Initializing database...
+Database initialized
+Found 500 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 500 events already ingested
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+
+Initializing database...
+Database initialized
+Found 500 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 500 events already ingested
+Rate limited. Waiting 1000ms before retry...
+Rate limited. Waiting 15000ms before retry...
+Rate limited. Waiting 4000ms before retry...
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+
+Initializing database...
+Database initialized
+Found 500 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 500 events already ingested
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+
+Initializing database...
+Database initialized
+Found 500 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 500 events already ingested
+Rate limited. Waiting 2000ms before retry...
+Rate limited. Waiting 3000ms before retry...
+Rate limited. Waiting 5000ms before retry...
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+
+Initializing database...
+Database initialized
+Found 500 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 500 events already ingested
+Rate limited. Waiting 12000ms before retry...
+Rate limited. Waiting 1000ms before retry...
+Rate limited. Waiting 14000ms before retry...
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+
+Initializing database...
+Database initialized
+Found 500 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 500 events already ingested
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+
+Initializing database...
+Database initialized
+Found 500 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 500 events already ingested
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+
+Initializing database...
+Database initialized
+Found 500 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 500 events already ingested
+Rate limited. Waiting 11000ms before retry...
+Rate limited. Waiting 4000ms before retry...
+Rate limited. Waiting 1000ms before retry...
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+
+Initializing database...
+Database initialized
+Found 500 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 500 events already ingested
+Rate limited. Waiting 1000ms before retry...
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+
+Initializing database...
+Database initialized
+Found 500 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 500 events already ingested
+Rate limited. Waiting 4000ms before retry...
+Rate limited. Waiting 12000ms before retry...
+Rate limited. Waiting 1000ms before retry...
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+
+Initializing database...
+Database initialized
+Found 500 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 500 events already ingested
+Rate limited. Waiting 14000ms before retry...
+Rate limited. Waiting 1000ms before retry...
+Rate limited. Waiting 4000ms before retry...
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+
+Initializing database...
+Database initialized
+Found 500 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 500 events already ingested
+Rate limited. Waiting 11000ms before retry...
+Rate limited. Waiting 4000ms before retry...
+Rate limited. Waiting 2000ms before retry...
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+
+Initializing database...
+Database initialized
+Found 500 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 500 events already ingested
+Request failed. Retrying in 1580ms... (attempt 2/3)
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+
+Initializing database...
+Database initialized
+Found 500 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 500 events already ingested
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+
+Initializing database...
+Database initialized
+Found 500 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 500 events already ingested
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+
+Initializing database...
+Database initialized
+Found 500 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 500 events already ingested
+Request failed. Retrying in 1703ms... (attempt 2/3)
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+
+Initializing database...
+Database initialized
+Found 500 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 500 events already ingested
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+
+Initializing database...
+Database initialized
+Found 500 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 500 events already ingested
+Rate limited. Waiting 11000ms before retry...
+Rate limited. Waiting 1000ms before retry...
+Rate limited. Waiting 4000ms before retry...
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+
+Initializing database...
+Database initialized
+Found 500 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 500 events already ingested
+Rate limited. Waiting 11000ms before retry...
+Request failed. Retrying in 2397ms... (attempt 3/3)
+Rate limited. Waiting 1000ms before retry...
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+
+Initializing database...
+Database initialized
+Found 500 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 500 events already ingested
+Rate limited. Waiting 14000ms before retry...
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+
+Initializing database...
+Database initialized
+Found 500 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 500 events already ingested
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+
+Initializing database...
+Database initialized
+Found 500 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 500 events already ingested
+Rate limited. Waiting 12000ms before retry...
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+
+Initializing database...
+Database initialized
+Found 500 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 500 events already ingested
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+
+Initializing database...
+Database initialized
+Found 500 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 500 events already ingested
+Rate limited. Waiting 11000ms before retry...
+Rate limited. Waiting 1000ms before retry...
+Rate limited. Waiting 4000ms before retry...
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+
+Initializing database...
+Database initialized
+Found 500 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 500 events already ingested
+Rate limited. Waiting 14000ms before retry...
+Rate limited. Waiting 1000ms before retry...
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+
+Initializing database...
+Database initialized
+
+Starting ingestion...
+Starting fresh ingestion
+Rate limited. Waiting 3000ms before retry...
+Request failed. Retrying in 2327ms... (attempt 3/3)
+Progress: 100 / 3,000,000 (0.00%) | 5 events/sec | ETA: 9536:40 | Buffer: 0
+Progress: 200 / 3,000,000 (0.01%) | 9 events/sec | ETA: 5543:52 | Buffer: 0
+Progress: 300 / 3,000,000 (0.01%) | 12 events/sec | ETA: 4213:54 | Buffer: 0
+Progress: 400 / 3,000,000 (0.01%) | 14 events/sec | ETA: 3550:24 | Buffer: 0
+Progress: 500 / 3,000,000 (0.02%) | 16 events/sec | ETA: 3154:34 | Buffer: 0
+Progress: 600 / 3,000,000 (0.02%) | 17 events/sec | ETA: 2890:45 | Buffer: 0
+Progress: 700 / 3,000,000 (0.02%) | 18 events/sec | ETA: 2702:17 | Buffer: 0
+Progress: 800 / 3,000,000 (0.03%) | 20 events/sec | ETA: 2561:19 | Buffer: 0
+Rate limited. Waiting 8000ms before retry...
+Rate limited. Waiting 11000ms before retry...
+Rate limited. Waiting 16000ms before retry...
