@@ -5,6 +5,7 @@ export declare const config: {
     maxRetries: number;
     retryBaseDelay: number;
     batchSize: number;
+    pageSize: number;
     logProgress: boolean;
     progressInterval: number;
 };

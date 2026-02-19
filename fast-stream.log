@@ -1,0 +1,144 @@
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+Page size: 5000 events/request
+
+Initializing database...
+Database initialized
+Found 50,000 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 50000 events already ingested
+Database has 50000 events
+Stream access obtained, expires in 300s
+Using high-throughput stream feed (no rate limits!)
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+Page size: 5000 events/request
+
+Initializing database...
+Database initialized
+Found 50,000 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 50000 events already ingested
+Database has 50000 events
+Stream access obtained, expires in 300s
+Using high-throughput stream feed (no rate limits!)
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+Page size: 5000 events/request
+
+Initializing database...
+Database initialized
+Found 50,000 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 50000 events already ingested
+Database has 50000 events
+Stream access obtained, expires in 300s
+Using high-throughput stream feed (no rate limits!)
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+Page size: 5000 events/request
+
+Initializing database...
+Database initialized
+Found 50,000 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 50000 events already ingested
+Database has 50000 events
+Stream access obtained, expires in 300s
+Using high-throughput stream feed (no rate limits!)
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+Page size: 5000 events/request
+
+Initializing database...
+Database initialized
+Found 50,000 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 50000 events already ingested
+Database has 50000 events
+Stream access obtained, expires in 300s
+Using high-throughput stream feed (no rate limits!)
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+Page size: 5000 events/request
+
+Initializing database...
+Database initialized
+Found 50,000 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 50000 events already ingested
+Database has 50000 events
+Stream access obtained, expires in 300s
+Using high-throughput stream feed (no rate limits!)
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+Page size: 5000 events/request
+
+Initializing database...
+Database initialized
+Found 50,000 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 50000 events already ingested
+Database has 50000 events
+Stream access obtained, expires in 300s
+Using high-throughput stream feed (no rate limits!)
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+Page size: 5000 events/request
+
+Initializing database...
+Database initialized
+Found 50,000 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 50000 events already ingested
+Database has 50000 events
+Stream access obtained, expires in 300s
+Using high-throughput stream feed (no rate limits!)
+============================================================
+DataSync Ingestion Pipeline
+============================================================
+API Base URL: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/api/v1
+Database URL: postgres://postgres:***@postgres:5432/ingestion
+Page size: 5000 events/request
+
+Initializing database...
+Database initialized
+Found 50,000 existing events in database
+
+Starting ingestion...
+Resuming from checkpoint: 50000 events already ingested
+Database has 50000 events
+Stream access obtained, expires in 300s
+Using high-throughput stream feed (no rate limits!)

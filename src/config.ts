@@ -4,11 +4,14 @@ export const config = {
   databaseUrl: process.env.DATABASE_URL || 'postgres://postgres:postgres@localhost:5434/ingestion',
 
   // Retry settings
-  maxRetries: 3,
+  maxRetries: 5,
   retryBaseDelay: 1000,
 
   // Batch settings
   batchSize: 100,
+
+  // Page size for API requests (max supported by API is 5000)
+  pageSize: parseInt(process.env.PAGE_SIZE || '5000', 10),
 
   // Logging
   logProgress: true,

@@ -7,10 +7,12 @@ exports.config = {
     apiKey: process.env.API_KEY || '',
     databaseUrl: process.env.DATABASE_URL || 'postgres://postgres:postgres@localhost:5434/ingestion',
     // Retry settings
-    maxRetries: 3,
+    maxRetries: 5,
     retryBaseDelay: 1000,
     // Batch settings
     batchSize: 100,
+    // Page size for API requests (try larger for better throughput)
+    pageSize: parseInt(process.env.PAGE_SIZE || '1000', 10),
     // Logging
     logProgress: true,
     progressInterval: 1000, // Log every N events

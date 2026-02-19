@@ -18,6 +18,7 @@ async function main() {
 
   console.log(`API Base URL: ${config.apiBaseUrl}`);
   console.log(`Database URL: ${config.databaseUrl.replace(/:[^:@]*@/, ':***@')}`);
+  console.log(`Page size: ${config.pageSize} events/request`);
 
   try {
     // Initialize database

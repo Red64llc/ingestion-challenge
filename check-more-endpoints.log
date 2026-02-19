@@ -1,0 +1,163 @@
+=== Extended API Check ===
+
+--- Sessions endpoint ---
+GET /sessions
+Status: 200
+{
+  "data": [
+    {
+      "id": "8a999d37-7532-4a32-80c5-d303a8b9c356",
+      "userId": "05fc078f-8aaa-43aa-8116-f25cf62a1f4d",
+      "user": {
+        "id": "05fc078f-8aaa-43aa-8116-f25cf62a1f4d",
+        "name": "henry 2955",
+        "email": "user2955@acme.com"
+      },
+      "deviceType": "mobile",
+      "browser": "Edge",
+      "os": "Android",
+      "ipAddress": "82.194.178.75",
+      "country": "CA",
+      "city": "City27",
+      "startedAt": "2026-01-27T18:32:25.698Z",
+      "endedAt": "2026-01-27T19:18:00.698Z",
+      "duration": 2735,
+      "eventCount": 47
+    },
+    {
+      "id": "f6cb46e3-687f-4ab5-9eab-4711e4e2307a",
+      "userId": "ea9181ce-a6cf-4256-8334-43612db131a9",
+      "user": {
+        "id": "ea9181ce-a6cf-4256-8334-43612db131a9",
+        "name": "grace 1539",
+        "email": "user1539@appmakers.com"
+      },
+      "deviceType": "tablet",
+
+--- Metrics endpoint ---
+GET /metrics
+Status: 200
+{
+  "data": [],
+  "pagination": {
+    "limit": 100,
+    "hasMore": false,
+    "nextCursor": null,
+    "cursorExpiresIn": null
+  },
+  "meta": {
+    "total": 0,
+    "returned": 0,
+    "requestId": "d9b6b9fd-4c29-49fa-8041-5a776d59f8d9"
+  }
+}
+
+--- Events count ---
+GET /events/count
+Status: 404
+
+--- Events stats ---
+GET /events/stats
+Status: 404
+
+--- Events summary ---
+GET /events/summary
+Status: 404
+
+--- Multiple cursors ---
+GET /events/cursors
+Status: 404
+
+--- Partitions ---
+GET /events/partitions
+Status: 404
+
+--- Chunks ---
+GET /events/chunks
+Status: 404
+
+--- Timestamp filtering ---
+Testing timestamp params...
+{
+  "total": 3000000,
+  "returned": 10,
+  "requestId": "af96a341-5699-455c-8ae6-83952f80a5df"
+}
+
+{
+  "total": 3000000,
+  "returned": 10,
+  "requestId": "30b3b32a-5947-4744-8c75-98a5b9a2019c"
+}
+
+{
+  "total": 3000000,
+  "returned": 10,
+  "requestId": "ba569db8-0a07-432b-b299-4e74072e3324"
+}
+
+--- ID-based starting point ---
+{
+  "total": 3000000,
+  "returned": 10,
+  "requestId": "ae1fe6b6-7359-4d97-9dce-cde0e82f0d83"
+}
+
+Too Many Requests
+
+--- Init/setup endpoint ---
+GET /events/init
+Status: 429
+{"error":"Too Many Requests","message":"Rate limit exceeded. Try again in 46 seconds.","code":"RATE_LIMIT_EXCEEDED","rateLimit":{"limit":10,"remaining":0,"reset":46,"retryAfter":46}}
+
+--- Prepare endpoint ---
+GET /events/prepare
+Status: 429
+{"error":"Too Many Requests","message":"Rate limit exceeded. Try again in 46 seconds.","code":"RATE_LIMIT_EXCEEDED","rateLimit":{"limit":10,"remaining":0,"reset":46,"retryAfter":46}}
+
+--- Jobs endpoint ---
+GET /jobs
+Status: 404
+
+--- Tasks endpoint ---
+GET /tasks
+Status: 404
+
+--- Downloads endpoint ---
+GET /downloads
+Status: 404
+
+--- Info ---
+GET /info
+Status: 404
+
+--- Status ---
+GET /status
+Status: 404
+
+--- Health ---
+GET /health
+Status: 404
+
+--- Config ---
+GET /config
+Status: 404
+
+--- Response headers (HEAD /events) ---
+HTTP/1.1 429 Too Many Requests
+Date: Thu, 19 Feb 2026 20:08:41 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 182
+Connection: keep-alive
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+X-Request-ID: 31bd89f3-537c-45b6-8a7f-d5f37651cb69
+X-RateLimit-Limit: 10
+X-RateLimit-Remaining: 0
+X-RateLimit-Reset: 44
+Retry-After: 44
+ETag: W/"b6-KAO3wzS6lKYRYI7glsf1ez06RrA"
+
+
+=== Key finding: limit=5000 works! ===
+3M events / 5000 per page = 600 requests (vs 30,000 at limit=100)

@@ -1,0 +1,1 @@
+{"error":"Too Many Requests","message":"Rate limit exceeded. Try again in 2 seconds.","code":"RATE_LIMIT_EXCEEDED","rateLimit":{"limit":10,"remaining":0,"reset":2,"retryAfter":2}}

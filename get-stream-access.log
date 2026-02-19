@@ -1,0 +1,40 @@
+=== Attempting to get stream access (browser-like request) ===
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com:80 was resolved.
+* IPv6: (none)
+* IPv4: 44.219.235.159, 52.86.151.173
+*   Trying 44.219.235.159:80...
+* Connected to datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com (44.219.235.159) port 80
+> POST /internal/dashboard/stream-access HTTP/1.1
+> Host: datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com
+> Accept: */*
+> Accept-Encoding: gzip, deflate
+> Accept-Language: en-US,en;q=0.9
+> Cache-Control: no-cache
+> Connection: keep-alive
+> Content-Type: application/json
+> Content-Length: 0
+> Cookie: dashboard_api_key=ds_56fb714400de4eb61737736fdb4fd060
+> Origin: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com
+> Pragma: no-cache
+> Referer: http://datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com/
+> User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36
+> X-API-Key: ds_56fb714400de4eb61737736fdb4fd060
+> 
+* Request completely sent off
+< HTTP/1.1 200 OK
+< Date: Thu, 19 Feb 2026 20:38:33 GMT
+< Content-Type: application/json; charset=utf-8
+< Content-Length: 320
+< Connection: keep-alive
+< X-Powered-By: Express
+< Access-Control-Allow-Origin: *
+< X-Request-ID: cce77795-2ee5-43f5-906e-cee185182de7
+< ETag: W/"140-bIg2Tpl4ljcvOYzDns3YUvwYLao"
+< 
+{ [320 bytes data]
+100   320  100   320    0     0   1523      0 --:--:-- --:--:-- --:--:--  1531
+* Connection #0 to host datasync-dev-alb-101078500.us-east-1.elb.amazonaws.com left intact
+{"streamAccess":{"endpoint":"/api/v1/events/d4ta/x7k9/feed","token":"ab02ae50bbad77baa55962326014ebfd4b8b0fedb1ca6feda991ad800bdf1bf0","expiresIn":300,"tokenHeader":"X-Stream-Token"},"meta":{"generatedAt":"2026-02-19T20:38:33.323Z","note":"Token is required in X-Stream-Token header when accessing the stream endpoint"}}
