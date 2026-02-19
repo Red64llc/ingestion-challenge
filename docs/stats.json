@@ -1,0 +1,70 @@
+{
+    "counts": {
+        "users": 3000,
+        "sessions": 60000,
+        "events": 3000000,
+        "metrics": 0
+    },
+    "distributions": {
+        "eventTypes": [
+            {
+                "type": "page_view",
+                "count": 1050459
+            },
+            {
+                "type": "click",
+                "count": 749415
+            },
+            {
+                "type": "api_call",
+                "count": 300487
+            },
+            {
+                "type": "form_submit",
+                "count": 299557
+            },
+            {
+                "type": "scroll",
+                "count": 150594
+            },
+            {
+                "type": "purchase",
+                "count": 150087
+            },
+            {
+                "type": "error",
+                "count": 149884
+            },
+            {
+                "type": "video_play",
+                "count": 149517
+            }
+        ],
+        "deviceTypes": [
+            {
+                "type": "mobile",
+                "count": 20159
+            },
+            {
+                "type": "tablet",
+                "count": 20042
+            },
+            {
+                "type": "desktop",
+                "count": 19799
+            }
+        ]
+    },
+    "meta": {
+        "generatedAt": "2026-02-19T18:15:15.201Z"
+    },
+    "cache": {
+        "status": "HIT",
+        "ttl": 233,
+        "redis": {
+            "keys": 2,
+            "memory": "7.62M",
+            "hitRate": "83.4%"
+        }
+    }
+}
